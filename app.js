@@ -152,15 +152,21 @@ Complete Exercise 11 in the space below:
 */
 
 const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
-odds = []
+const odds = [];
+
+
+
+nums.forEach(num => {
+   if (num % 2 !==0) {
+      odds.push(num);
+   }
+});
+
+
+
+
  
 
-for  (let i = 0; i < nums.length; i++) {
-    if (nums[i] % 2 ==0);
-    //console.log(nums[i]);
-
-  }
- 
 
 
 
@@ -169,3 +175,143 @@ for  (let i = 0; i < nums.length; i++) {
 
 
 console.log('Exercise 11 result:',odds);
+
+
+/*
+Exercise 12: FizzBuzz with arrays
+
+1) Choose a method to iterate through the `nums` array. 
+
+2. As you loop, sort the numbers into new arrays based on the following rules:
+
+   - Push any number evenly divisible by 3 to an array called `fizz`.
+   - Push any number evenly divisible by 5 to an array called `buzz`.
+   - Push any number that is evenly divisible by 3 and 5 to an array called
+     `fizzbuzz`.
+
+   Note: A single number may meet more than one of the above rules. If it does,
+         it should be placed in multiple arrays. For example, the number `15`
+         will appear in the `fizz`, `buzz`, and `fizzbuzz` arrays.
+
+Complete Exercise 12 in the space below:
+*/
+//const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
+const fizz = [];
+const buzz = [];
+const fizzbuzz = [];
+
+nums.forEach(num => 
+   { if (num % 3 == 0)
+       {fizz.push(num);}
+
+}
+);
+nums.forEach(num => 
+{ if (num % 5 ==0)
+{buzz.push(num);}
+}
+
+
+
+
+);
+nums.forEach(num => {
+   if (num % 5 ==0 && num % 3 ==0)
+   {fizzbuzz.push(num);}
+});
+
+console.log('Exercise 12 Results:');
+console.log('  fizz:', fizz);
+console.log('  buzz:', buzz);
+console.log('  fizzbuzz:', fizzbuzz);
+/*
+Exercise 13: Retrieve the Last Array
+
+1) Assign the last nested array in the `numArrays` below to a variable named
+   `numList`. As you do this, also fulfill these goals:
+
+   - Assume you don't know how many nested arrays `numArrays` contains.
+   - Do not alter the original `numArrays` array.
+
+Complete Exercise 13 in the space below:
+*/
+
+const numArrays = [
+	[100, 5, 23],
+	[15, 21, 72, 9],
+	[45, 66],
+	[7, 81, 90]
+];
+
+const numList = [];
+
+const i = numArrays.length;
+
+numList.push(numArrays[i-1]);
+
+
+
+
+
+
+console.log('Exercise 13 result:', numList);
+/*
+Exercise 14: Accessing within nested arrays
+
+1) Retrieve the number `66` from the `numArrays` array. As part of this process
+   do not alter the original `numArrays` array.
+
+2) Assign it to a variable called `num`.
+
+Complete Exercise 14 in the space below:
+*/
+const num = [];
+num.push(numArrays[2][1]);
+
+
+
+console.log('Exercise 14 result:', num);
+/*
+Exercise 15: Nested array sum
+
+1) Use nested loops or `forEach()` methods to sum up all numbers within 
+   `numArrays` nested arrays.
+   
+2) Assign the sum to a variable called `total`.
+
+Hint: Be sure to declare and initialize the total variable before the iterations.
+
+Complete Exercise 15 in the space below:
+*/
+
+let total = 0 ;
+
+
+
+for (let i = 0; i < numArrays.length; i ++ ){
+for (let r = 0 ; r < numArrays[i].length; r ++){
+total += numArrays[i][r];
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+//i = i + (numArrays[0]+numArrays[1]+numArrays[2]+numArrays[3]);
+// r = numArrays[0][0]+numArrays[0][1]+ numArrays[0][2];
+
+
+
+
+
+console.log('Exercise 15 result:\n', total);
